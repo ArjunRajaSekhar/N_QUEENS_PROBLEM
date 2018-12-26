@@ -293,15 +293,5 @@ $ python q_func.py
 82531746
 83162574
 84136275
-Done. Took 0.0629
-
-
-If we look at the possible ways we can place eight queens on the board with the only constraint being that only one queen may occupy a given square we get:
-
->>> 64*63*62*61*60*59*58*57*56
-   9993927307714560
-
-Another way to express this is "64!/55!" where "!" indicates factorial (and has precedence over the division). 9,993,927,307,714,560 is a big number and the computation would basically run forever. Bruce tweaked the program to jumpstart the search by adding a one queen per row condition. But it still took about 3 minutes to find all 92 solutions. Well over 1000 times as long as the two programs above. Why?
-
-In our programs we do a breadth first tree search, but by generating partial solutions that can be eliminated along with all their descendents, we dramatically prune the tree as we go. This is similar to the knapsack problem discussed in the Dynamic Programming project.
+Done. Took 0.069
 
