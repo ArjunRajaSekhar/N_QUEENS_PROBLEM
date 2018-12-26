@@ -295,10 +295,6 @@ $ python q_func.py
 84136275
 Done. Took 0.0629
 
-Except that now the program takes about 60 milliseconds to run. I have not looked into this carefully but I suspect this is the overhead of concatinating the inner lists to restore the flat structure expected in partials. Each "+" operation creates a new list and once the program is underway, these become fairly long. In the iterative version the list append method is much more efficient.
-Speaking of efficiency
-
-I got interested in the eight queens puzzle several years ago from Bruce Tate's book "Seven languages in Seven Weeks". Prolog is one of the seven and Bruce used the eight queens puzzle as an example of its strengths. It's interesting in that basically only the rules of the puzzle are described in Prolog and it automatically applies a breadth first search for solutions.
 
 If we look at the possible ways we can place eight queens on the board with the only constraint being that only one queen may occupy a given square we get:
 
